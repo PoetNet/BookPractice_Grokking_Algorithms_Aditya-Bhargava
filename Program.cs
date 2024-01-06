@@ -10,8 +10,10 @@ using Grokking_Algorithms.Helpers;
 //         .AddJob(Job.Default.WithIterationCount(10))
 //         );
 
-int[] testArray = ArrayGenerator.GetRandomIntArray(10);
+int[] testArray = ArrayGenerator.GetRandomIntArray(1000);
 
 Console.WriteLine(Printer.GetArrayAsString(testArray));
 Console.WriteLine(SortingChapter3.SumRecursive(testArray));
+Console.WriteLine(SortingChapter3.CountRecursive(testArray));
+Console.WriteLine(SortingChapter3.GetMaxNumberRecursive(testArray));
 Console.ReadKey();
