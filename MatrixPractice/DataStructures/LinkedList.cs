@@ -1,8 +1,9 @@
 using System.Diagnostics;
+using System.Collections;
 
 namespace Grokking_Algorithms.DataStructures;
 
-public class LinkedList<T>
+public class LinkedList<T> : IEnumerable<T>
 {
     internal LinkedListNode<T>? head = null;
 
@@ -162,5 +163,25 @@ public class LinkedList<T>
         }
         node.Invalidate();
     }
+    
+    public IEnumerator<T> GetEnumerator()
+    {
+        if (head == null)
+        {
+            yield break;
+        }
 
+        LinkedListNode<T> current = head;
+
+        do
+        {
+            yield return current.item;
+            current = current.next;
+        } while (current != head) ;
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return GetEnumerator();
+    }
 }
