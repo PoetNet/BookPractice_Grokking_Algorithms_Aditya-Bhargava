@@ -1,4 +1,6 @@
 ﻿using Grokking_Algorithms.DataStructures;
+using Grokking_Algorithms.MatrixPractice.AlgorithmsExamples;
+using Grokking_Algorithms.MatrixPractice.DataStructures;
 
 // var summary = BenchmarkRunner.Run<TheEasiestBenchmark>(
 //     ManualConfig
@@ -60,9 +62,80 @@
 
 #endregion
 
+#region LIFO and FIFO (Stack and Queue)
+
+//CustomStack<string> customStack = new CustomStack<string>(3);
+//customStack.Push("White");
+//customStack.Push("Blue");
+//customStack.Push("Red");
+
+//Console.WriteLine(string.Join("\t", customStack.Items));
+
+//Console.WriteLine("Custom Stack Count: " + customStack.Count);
+//Console.WriteLine("Pop from Custom Stack: " + customStack.Pop());
+//Console.WriteLine("Custom Stack Count after Pop: " + customStack.Count);
+
+//customStack.Push("Новенький");
+
+//Console.WriteLine(string.Join("\t", customStack.Items), "\n\n");
+
+//CustomQueue<string> customQueue = new CustomQueue<string>(3);
+//customQueue.Enqueue("A");
+//customQueue.Enqueue("B");
+//customQueue.Enqueue("C");
+
+//Console.WriteLine(string.Join("\t", customQueue.Items));
+
+//Console.WriteLine("Custom Queue Count: " + customQueue.Count);
+//Console.WriteLine("Dequeue from Custom Queue: " + customQueue.Dequeue());
+//Console.WriteLine("Dequeue from Custom Queue: " + customQueue.Dequeue());
+//Console.WriteLine("Dequeue from Custom Queue: " + customQueue.Dequeue());
+//Console.WriteLine("Custom Queue Count after Dequeue: " + customQueue.Count);
+
+//Console.WriteLine(string.Join("\t", customQueue.Items));
+
+//customQueue.Enqueue("Новенький1");
+//customQueue.Enqueue("Новенький2");
+//Console.WriteLine("Dequeue from Custom Queue: " + customQueue.Dequeue());
+//customQueue.Enqueue("Новенький4");
+
+//Console.WriteLine(string.Join("\t", customQueue.Items));
+
+#endregion
+
+#region MergeSort (Алгоритм устойчивой сортировки не хуже  O(n*log(n)) в среднем - Соритровка слиянием)
+
+//int[] arr = { 12, 11, 13, 5, 11, 89, 89, 6, 7 };
+//Console.WriteLine("Unsorted array: " + string.Join(", ", arr));
+//MergeSort.Sort(arr);
+//Console.WriteLine("Sorted array: " + string.Join(", ", arr));
+
+#endregion
+
+#region QuickSort (Алгоритм неустойчивой сортировки не хуже  O(n*log(n)) в среднем - Быстрая сортировка)
+
+//int[] arr = { 12, 11, 13, 5, 11, 89, 89, 6, 7 };
+//Console.WriteLine("Unsorted array: " + string.Join(", ", arr));
+////QuickSort.Sort(arr);
+////Console.WriteLine("Sorted array: " + string.Join(", ", arr));
+
+//List<int> testList = OtherQuickSort.Sort(arr.ToList());
+//Console.WriteLine("Sorted array: " + string.Join(", ", testList));
+
+#endregion
+
+#region BubbleSort (Пызрьковая сортировка)
+
+int[] arr = { 12, 11, 13, 5, 11, 89, 89, 6, 7 };
+Console.WriteLine("Unsorted array: " + string.Join(", ", arr));
+BubbleSort.Sort(arr);
+Console.WriteLine("Sorted array: " + string.Join(", ", arr));
+
+#endregion
+
 Console.ReadKey();
 
-#region Additional classes
+#region Additional classes 
 
 class Person
 {
