@@ -1,5 +1,5 @@
-using System.Diagnostics;
 using System.Collections;
+using System.Diagnostics;
 
 namespace Grokking_Algorithms.DataStructures;
 
@@ -109,8 +109,8 @@ public class LinkedList<T> : IEnumerable<T>
     {
         LinkedListNode<T>? node = FindFirst(value);
         if (node == null)
-        { 
-            return false; 
+        {
+            return false;
         }
 
         InternalRemoveNode(node);
@@ -163,7 +163,7 @@ public class LinkedList<T> : IEnumerable<T>
         }
         node.Invalidate();
     }
-    
+
     public IEnumerator<T> GetEnumerator()
     {
         if (head == null)
@@ -177,7 +177,7 @@ public class LinkedList<T> : IEnumerable<T>
         {
             yield return current.item;
             current = current.next;
-        } while (current != head) ;
+        } while (current != head);
     }
 
     IEnumerator IEnumerable.GetEnumerator()

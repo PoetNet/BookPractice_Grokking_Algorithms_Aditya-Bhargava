@@ -1,8 +1,8 @@
-namespace Grokking_Algorithms.Helpers;
+namespace Grokking_Algorithms.MatrixPractice.Helpers;
 
 public class ArrayGenerator
 {
-    public static int[] GetRandomIntArray( int arrayLength, int min = 0, int max = 100)
+    public static int[] GetRandomIntArray(int arrayLength, int min = 0, int max = 100)
     {
         int[] arr = new int[arrayLength];
         Random random = new();

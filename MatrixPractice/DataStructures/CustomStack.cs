@@ -6,7 +6,7 @@ public class CustomStack<T>
     private int _top;
 
     private const int DefaultCapacity = 4;
-    
+
     public int Count => _top + 1;
     public CustomStack(int capacity)
     {

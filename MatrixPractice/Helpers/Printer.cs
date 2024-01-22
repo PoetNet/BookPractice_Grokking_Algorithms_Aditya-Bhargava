@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace Grokking_Algorithms.Helpers;
+namespace Grokking_Algorithms.MatrixPractice.Helpers;
 
 public class Printer
 {
@@ -8,7 +8,7 @@ public class Printer
     {
         StringBuilder stringBuilder = new();
         stringBuilder.Append("[");
-        for (int i=0; i < arr.Length; i++)
+        for (int i = 0; i < arr.Length; i++)
         {
             stringBuilder.Append($" {arr[i]}");
         }

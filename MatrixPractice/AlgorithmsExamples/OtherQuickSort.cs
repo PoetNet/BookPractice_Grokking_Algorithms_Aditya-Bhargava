@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Grokking_Algorithms.MatrixPractice.AlgorithmsExamples;
+﻿namespace Grokking_Algorithms.MatrixPractice.AlgorithmsExamples;
 
 public class OtherQuickSort
 {
@@ -19,9 +13,6 @@ public class OtherQuickSort
             T pivot = array[0];
             List<T> less = new();
             List<T> greater = new();
-
-            //T[] less = array.Skip(1).Where(i => i <= pivot).ToArray();
-            //T[] greater = array.Skip(1).Where(i => i > pivot).ToArray();
 
             for (int i = 1; i < array.Count; i++)
             {

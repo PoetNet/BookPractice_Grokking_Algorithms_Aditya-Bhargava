@@ -1,5 +1,3 @@
-using System.Diagnostics;
-
 namespace Grokking_Algorithms.DataStructures;
 
 public class HashTable<TKey, TValue>
@@ -39,7 +37,7 @@ public class HashTable<TKey, TValue>
 
         if (_table[index] != null)
         {
-            foreach(var pair in _table[index])
+            foreach (var pair in _table[index])
             {
                 if (pair.Key.Equals(key))
                     return pair.Value;

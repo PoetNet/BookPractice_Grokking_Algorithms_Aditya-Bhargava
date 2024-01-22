@@ -1,6 +1,5 @@
-﻿using Grokking_Algorithms.DataStructures;
+﻿using Grokking_Algorithms.Algorithms;
 using Grokking_Algorithms.MatrixPractice.AlgorithmsExamples;
-using Grokking_Algorithms.MatrixPractice.DataStructures;
 
 // var summary = BenchmarkRunner.Run<TheEasiestBenchmark>(
 //     ManualConfig
@@ -126,17 +125,57 @@ using Grokking_Algorithms.MatrixPractice.DataStructures;
 
 #region BubbleSort (Пызрьковая сортировка)
 
-int[] arr = { 12, 11, 13, 5, 11, 89, 89, 6, 7 };
-Console.WriteLine("Unsorted array: " + string.Join(", ", arr));
-BubbleSort.Sort(arr);
-Console.WriteLine("Sorted array: " + string.Join(", ", arr));
+//int[] arr = { 12, 11, 13, 5, 11, 89, 89, 6, 7 };
+//Console.WriteLine("Unsorted array: " + string.Join(", ", arr));
+//BubbleSort.Sort(arr);
+//Console.WriteLine("Sorted array: " + string.Join(", ", arr));
+
+#endregion
+
+#region CustomBreadthFirstSearch
+
+var graph = BreadthFirstSearch.ArrangeSomeValues();
+var searchResult = BreadthFirstSearch.SearchMangoSeller(graph);
+
+Console.WriteLine($"Seller is found: {searchResult.Item1}");
+Console.WriteLine($"Searched persons: {string.Join(", ", searchResult.Item2)}");
+Console.WriteLine($"Mango seller: {searchResult.Item3}");
+
+//Queue<string> searchQueue = new();
+
+//foreach (string item in graph["you"])
+//{
+//    searchQueue.Enqueue(item);
+//}
+
+//List<string> searched = new();
+//while (searchQueue.Count > 0)
+//{
+//    string person = searchQueue.Dequeue();
+//    if (!searched.Contains(person))
+//    {
+//        if (BreadthFirstSearch.PersonIsSeller(person))
+//        {
+//            Console.WriteLine($"Person '{person}' is mango seller");
+//        }
+//        else
+//        {
+//            searched.Add(person);
+//            foreach (string item in graph[person])
+//            {
+//                searchQueue.Enqueue(item);
+//            }
+//        }
+//    }
+//}
+
+//Console.WriteLine($"Your friends have no mango sellers in facebook");
 
 #endregion
 
 Console.ReadKey();
 
-#region Additional classes 
-
+#region AdditionalClasses
 class Person
 {
     public string Name { get; set; } = string.Empty;
@@ -148,7 +187,7 @@ class Person
 
     public override bool Equals(object? obj)
     {
-        if (!(obj is Person otherPerson)) 
+        if (!(obj is Person otherPerson))
             return false;
 
         return Name == otherPerson.Name && Age == otherPerson.Age;
@@ -156,3 +195,4 @@ class Person
 }
 
 #endregion
+
