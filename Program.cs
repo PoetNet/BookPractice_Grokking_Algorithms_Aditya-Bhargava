@@ -1,5 +1,4 @@
 ﻿using Grokking_Algorithms.Algorithms;
-using Grokking_Algorithms.MatrixPractice.AlgorithmsExamples;
 
 // var summary = BenchmarkRunner.Run<TheEasiestBenchmark>(
 //     ManualConfig
@@ -134,12 +133,12 @@ using Grokking_Algorithms.MatrixPractice.AlgorithmsExamples;
 
 #region CustomBreadthFirstSearch
 
-var graph = BreadthFirstSearch.ArrangeSomeValues();
-var searchResult = BreadthFirstSearch.SearchMangoSeller(graph);
+//var graph = BreadthFirstSearch.ArrangeSomeValues();
+//var searchResult = BreadthFirstSearch.SearchMangoSeller(graph);
 
-Console.WriteLine($"Seller is found: {searchResult.Item1}");
-Console.WriteLine($"Searched persons: {string.Join(", ", searchResult.Item2)}");
-Console.WriteLine($"Mango seller: {searchResult.Item3}");
+//Console.WriteLine($"Seller is found: {searchResult.Item1}");
+//Console.WriteLine($"Searched persons: {string.Join(", ", searchResult.Item2)}");
+//Console.WriteLine($"Mango seller: {searchResult.Item3}");
 
 //Queue<string> searchQueue = new();
 
@@ -170,6 +169,76 @@ Console.WriteLine($"Mango seller: {searchResult.Item3}");
 //}
 
 //Console.WriteLine($"Your friends have no mango sellers in facebook");
+
+#endregion
+
+#region DijkstraAlgorithm
+
+//Dictionary<string, Dictionary<string, int>> graphDictionary = new();
+//graphDictionary["start"] = new()
+//{
+//    { "a", 6 },
+//    { "b", 2 }
+//};
+//graphDictionary["a"] = new()
+//{
+//    { "fin", 1 }
+//};
+//graphDictionary["b"] = new()
+//{
+//    { "a", 3 },
+//    { "fin", 5 }
+//};
+
+//graphDictionary["fin"] = new();
+
+//Dictionary<string, int> costs = new()
+//{
+//    {"a", 6},
+//    {"b", 2},
+//    {"fin", int.MaxValue}
+//};
+//Dictionary<string, string> parents = new()
+//{
+//    {"a", "start"},
+//    {"b", "start"},
+//    {"fin", "-"}
+//};
+
+//var dijkstra = new DijkstraAlgorithm(graphDictionary, costs, parents);
+//dijkstra.RunDijkstra();
+
+//Console.WriteLine($"Optimal route: {string.Join(',', dijkstra.OptimalRoute)}");
+
+#endregion
+
+#region GreedyAlgorithm
+
+//HashSet<string> statesNeeded = new() { "mt", "wa", "or", "id", "nv", "ut", "ca", "az" };
+//var stations = new Dictionary<string, HashSet<string>>
+//{
+//    { "kone", new HashSet<string> { "id", "nv", "ut" } },
+//    { "ktwo", new HashSet<string> { "wa", "id", "mt" } },
+//    { "kthree", new HashSet<string> { "or", "nv", "ca" } },
+//    { "kfour", new HashSet<string> { "nv", "ut" } },
+//    { "kfive", new HashSet<string> { "ca", "az" } }
+//};
+//GreedyAlgorithm greedy = new(statesNeeded, stations);
+//greedy.FindFinalData();
+
+#endregion
+
+#region StringSequenceCalculator
+
+string expectedString = "fish";
+string search1 = "hish";
+string search2 = "fosh";
+string search3 = "finn";
+
+int stingSequence1 = StringSequenceCalculator.CalculateSequence(expectedString, search1);
+int stingSequence2 = StringSequenceCalculator.CalculateSequence(expectedString, search2);
+int stingSequence3 = StringSequenceCalculator.CalculateSequence(expectedString, search3);
+Console.WriteLine(stingSequence1.ToString() + ", " + stingSequence2.ToString() + ", " + stingSequence3.ToString());
 
 #endregion
 

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace Grokking_Algorithms.Algorithms;
+﻿namespace Grokking_Algorithms.Algorithms;
 
 public class BreadthFirstSearch
 {
@@ -38,11 +36,11 @@ public class BreadthFirstSearch
 
     public static Dictionary<string, List<string>> ArrangeSomeValues()
     {
-        Dictionary<string, List<string>> graph = new ();
+        Dictionary<string, List<string>> graph = new();
 
-        graph["you"] = new () { "alice", "bob", "claire" };
+        graph["you"] = new() { "alice", "bob", "claire" };
         graph["bob"] = new() { "anuj", "peggy" };
-        graph["alice"] = new(){ "peggy" };
+        graph["alice"] = new() { "peggy" };
         graph["claire"] = new() { "thom", "jonny" };
 
         graph["anuj"] = new();
